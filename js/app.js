@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', function () {
         this.width = boardWidth;
         this.height = boardHeight;
 
-        this.board = document.querySelector('#board');
+        this.board = document.querySelector('.board');
 
         this.cells = [];
 
         this.createBoard = function () {
             this.board.style.height = this.height*10 + 'px';
             this.board.style.width = this.width*10 + 'px';
+            this.board.style.display = 'block';
 
             this.cellsNumber = this.height * this.width;
 
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var height = document.querySelector('#board-height').value || 10;
         var game = new GameOfLife(width,height);
 
-        document.querySelector('#board').innerHTML = '';
+        document.querySelector('.board').innerHTML = '';
         game.createBoard();
 
         play.disabled = false;

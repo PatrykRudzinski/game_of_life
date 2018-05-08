@@ -1,0 +1,114 @@
+$clr-main: #663399;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/wormz.png');
+}
+
+.board {
+  display: none;
+  margin: 50px auto 0;
+  min-height: 100px;
+  min-width: 100px;
+  box-shadow: 0 0 10px 2px rgba(#999,0.82);
+
+  div {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #888;
+    background-color: #fff;
+    float: left;
+
+    &.live {
+      background-color: #444;
+    }
+  }
+}
+
+.game-set {
+  margin: 50px auto;
+  width: 200px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+}
+.btns > button {
+  width: 50%;
+  margin: 10px;
+  background-color: $clr-main;
+  border: 1px solid $clr-main;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+
+  &:hover {
+    background-color: darken($clr-main, 7%);
+  }
+  &:disabled {
+    color: rgba(#eee, 0.3);
+    &:hover {
+      background-color: $clr-main;
+    }
+  }
+}
+.settings-inputs {
+  display: flex;
+  width: 90%;
+  margin: 5px auto;
+  justify-content: space-between;
+
+
+  input {
+    width: calc(50% - 10px);
+    display: block;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: 1px solid $clr-main;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.settings > button {
+  width: 90%;
+  display: block;
+  margin: 5px auto;
+  background-color: $clr-main;
+  border: 1px solid $clr-main;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
+
+  &:hover {
+    background-color: darken($clr-main, 7%);
+  }
+  &:disabled {
+    color: rgba(#eee, 0.3);
+    &:hover {
+      background-color: $clr-main;
+    }
+  }
+}
