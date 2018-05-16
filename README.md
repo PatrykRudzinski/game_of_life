@@ -1,6 +1,6 @@
 # [Conway's Game of Life](https://patrykrudzinski.github.io/game_of_life/)
 
-1. __Set width and height of board (*minimun 10*)__
+__1. Set width and height of board (*minimun 10*)__
 2. __Click on white square to make cell alive or dead__
 3. __Click start and enjoy__
 4. __Cells will behaviour in that way:__
