@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
         this.cells = [];
 
         this.createBoard = function () {
-            this.board.style.height = this.height*10 + 'px';
-            this.board.style.width = this.width*10 + 'px';
+            var cellSize;
+            window.innerWidth > 768 ? cellSize = 10 : cellSize = 20;
+            this.board.style.height = this.height * cellSize + 'px';
+            this.board.style.width = this.width * cellSize + 'px';
             this.board.style.display = 'block';
 
             this.cellsNumber = this.height * this.width;
@@ -79,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
             })
         }
     }
-
 
     var play = document.querySelector('#play');
     var pause = document.querySelector('#pause');

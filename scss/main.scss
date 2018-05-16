@@ -23,6 +23,11 @@ body {
     background-color: #fff;
     float: left;
 
+    @media (max-width: 768px) {
+      width: 20px;
+      height: 20px;
+    }
+
     &.live {
       background-color: #444;
     }
@@ -32,15 +37,20 @@ body {
 .game-set {
   margin: 50px auto;
   width: 200px;
+
+  @media (max-width: 768px) {
+    margin: 10px auto;
+    width: 95vw;
+  }
 }
 
 .btns {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
+
 .btns > button {
-  width: 50%;
-  margin: 10px;
+  width: 49%;
   background-color: $clr-main;
   border: 1px solid $clr-main;
   border-radius: 5px;
@@ -49,6 +59,10 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    padding: 10px 10px;
+  }
 
   &:hover {
     background-color: darken($clr-main, 7%);
@@ -62,13 +76,13 @@ body {
 }
 .settings-inputs {
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: 5px auto;
   justify-content: space-between;
 
 
   input {
-    width: calc(50% - 10px);
+    width: 49%;
     display: block;
     padding: 5px 10px;
     background-color: transparent;
@@ -76,6 +90,10 @@ body {
     border-radius: 5px;
     text-align: center;
     font-size: 18px;
+
+    @media (max-width: 768px) {
+      padding: 10px 10px;
+    }
 
     &:focus {
       outline: none;
@@ -90,7 +108,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .settings > button {
-  width: 90%;
+  width: 100%;
   display: block;
   margin: 5px auto;
   background-color: $clr-main;
@@ -101,6 +119,10 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   transition: 0.3s;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    padding: 10px 10px;
+  }
 
   &:hover {
     background-color: darken($clr-main, 7%);
