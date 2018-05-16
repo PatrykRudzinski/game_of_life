@@ -15,3 +15,9 @@ __4. Cells will behaviour in that way:__
 > * Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction. 
 
 
+## Tech stack:
+* Vanilla JS
+* Sass
+* gulp
+
+
