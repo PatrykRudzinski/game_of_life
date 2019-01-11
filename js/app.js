@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
         };
         this.computeNextGeneration = function () {
             this.nextGeneration = [];
-            for (var i = 0; i < this.height; i++) {
-                for (var j = 0; j < this.width; j++){
+            for (var i = 0; i < this.width; i++) {
+                for (var j = 0; j < this.height; j++){
                     this.nextGeneration.push(this.computeCellNextState(i, j))
                 }
             }
